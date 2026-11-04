@@ -1,0 +1,12 @@
+{
+  "macro_f1": 0.6511,
+  "accuracy": 0.7475,
+  "balanced_accuracy": 0.6511,
+  "fit_s": 0.23,
+  "predict_s": 0.001,
+  "best_criterion": "entropy",
+  "best_depth": null,
+  "best_alpha": 9.1e-05,
+  "n_leaves": 1924,
+  "actual_depth": 36
+}

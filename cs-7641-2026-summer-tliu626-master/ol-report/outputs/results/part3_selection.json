@@ -1,0 +1,26 @@
+{
+  "best_single": {
+    "name": "l2_0.001",
+    "reg": {
+      "weight_decay": 0.001
+    }
+  },
+  "best_combo": {
+    "members": [
+      "l2_0.001",
+      "dropout_0.5",
+      "inputnoise_0.1"
+    ],
+    "reg": {
+      "weight_decay": 0.001,
+      "dropout": 0.5,
+      "input_noise": 0.1
+    }
+  },
+  "adam_baseline_mean_val_loss": 0.696771727403005,
+  "adam_lr": 0.001,
+  "adam_betas": [
+    0.9,
+    0.999
+  ]
+}

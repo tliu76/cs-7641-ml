@@ -1,0 +1,6 @@
+{
+  "representation": "majority_class",
+  "accuracy": 0.48775,
+  "macro_f1": 0.09366973137767963,
+  "balanced_accuracy": 0.14285714285714285
+}

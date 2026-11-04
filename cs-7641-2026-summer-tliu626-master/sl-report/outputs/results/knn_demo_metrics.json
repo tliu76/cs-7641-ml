@@ -1,0 +1,10 @@
+{
+  "macro_f1": 0.54,
+  "accuracy": 0.674,
+  "balanced_accuracy": 0.5582,
+  "fit_s": 0.001,
+  "predict_s": 0.082,
+  "best_k": 1,
+  "best_weight": "uniform",
+  "best_metric": "manhattan"
+}

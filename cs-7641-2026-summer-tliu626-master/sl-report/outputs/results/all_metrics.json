@@ -1,0 +1,90 @@
+{
+  "Baseline (majority)": {
+    "macro_f1": 0.0937,
+    "accuracy": 0.4878,
+    "balanced_accuracy": 0.1429,
+    "fit_s": 0.0,
+    "predict_s": 0.0
+  },
+  "DT": {
+    "macro_f1": 0.6511,
+    "accuracy": 0.7475,
+    "balanced_accuracy": 0.6511,
+    "fit_s": 0.23,
+    "predict_s": 0.001,
+    "best_criterion": "entropy",
+    "best_depth": null,
+    "best_alpha": 9.1e-05,
+    "n_leaves": 1924,
+    "actual_depth": 36
+  },
+  "kNN": {
+    "macro_f1": 0.667,
+    "accuracy": 0.7877,
+    "balanced_accuracy": 0.6654,
+    "fit_s": 0.004,
+    "predict_s": 0.909,
+    "best_k": 1,
+    "best_weight": "uniform",
+    "best_metric": "manhattan"
+  },
+  "SVM": {
+    "linear": {
+      "macro_f1": 0.5492,
+      "accuracy": 0.6855,
+      "balanced_accuracy": 0.6246,
+      "fit_s": 4.745,
+      "predict_s": 0.003,
+      "best_C": 10
+    },
+    "rbf": {
+      "macro_f1": 0.6901,
+      "accuracy": 0.7995,
+      "balanced_accuracy": 0.7058,
+      "fit_s": 8.934,
+      "predict_s": 2.105,
+      "best_C": 100,
+      "best_gamma": 0.1
+    }
+  },
+  "NN_sklearn": {
+    "macro_f1": 0.6783,
+    "accuracy": 0.8075,
+    "balanced_accuracy": 0.6457,
+    "fit_s": 32.969,
+    "predict_s": 0.008,
+    "arch": "(200, 100)",
+    "lr": 0.1,
+    "alpha": 0.1,
+    "n_epochs": 146
+  },
+  "NN_pytorch": {
+    "macro_f1": 0.6384,
+    "accuracy": 0.746,
+    "balanced_accuracy": 0.7494,
+    "fit_s": 21.316,
+    "predict_s": 0.005,
+    "hidden": 150,
+    "lr": 0.1,
+    "wd": 0.0001,
+    "stop_epoch": 137,
+    "activation_study": {
+      "ReLU": {
+        "test_macro_f1": 0.6272,
+        "stop_epoch": 126
+      },
+      "GELU": {
+        "test_macro_f1": 0.5645,
+        "stop_epoch": 51
+      },
+      "SiLU": {
+        "test_macro_f1": 0.6465,
+        "stop_epoch": 180
+      },
+      "Tanh": {
+        "test_macro_f1": 0.6413,
+        "stop_epoch": 134
+      }
+    }
+  }
+}

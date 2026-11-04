@@ -1,0 +1,10 @@
+# UL Report (CS7641 Summer 2026) — pinned at run time in REPRO.
+# Install: pip install -r requirements.txt
+torch>=2.2
+numpy>=1.26
+pandas>=2.1
+scipy>=1.11
+scikit-learn>=1.4
+matplotlib>=3.8
+# Optional (extra-credit manifold learning, only if UL_MANIFOLD=umap):
+# umap-learn>=0.5

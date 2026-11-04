@@ -1,0 +1,30 @@
+{
+  "python": "3.11.9",
+  "platform": "Linux-4.18.0-553.126.1.el8_10.x86_64-x86_64-with-glibc2.28",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "sample_seed": 42,
+  "split_seed": 42,
+  "sample_size": 20000,
+  "splits": {
+    "test_frac": 0.2,
+    "val_frac": 0.2
+  },
+  "batch_size": 128,
+  "epochs": 100,
+  "hidden_sizes": [
+    150
+  ],
+  "ro_param_cap": 50000,
+  "ro_func_eval_budget": 3000,
+  "data_path": "/scratch1/tanxinli/7641/cs-7641-2026-summer-tliu626/sl-report/data/covtype.data",
+  "torch_version": "2.6.0+cu124",
+  "numpy_version": "2.4.6",
+  "pandas_version": "3.0.3",
+  "sklearn_version": "1.9.0",
+  "matplotlib_version": "3.11.0",
+  "git_commit": "cb19a37f9b178155f92f8a3ff549b0639db1cbf6"
+}

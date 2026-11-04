@@ -1,0 +1,83 @@
+{
+  "git_commit": "67e8309a2d69d19a903615436e12e8e500fdce0d",
+  "python": "3.11.9",
+  "platform": "Linux-4.18.0-553.126.1.el8_10.x86_64-x86_64-with-glibc2.28",
+  "packages": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.0",
+    "matplotlib": "3.11.0",
+    "torch": "2.6.0+cu124"
+  },
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "sample_seed": 42,
+  "split_seed": 42,
+  "sample_size_config": 20000,
+  "sample_size_actual": 20000,
+  "test_frac": 0.2,
+  "val_frac": 0.2,
+  "scale_all": false,
+  "data_path": "/scratch1/tanxinli/7641/cs-7641-2026-summer-tliu626/sl-report/Data/covtype.data",
+  "sl_sample_path": "/scratch1/tanxinli/7641/cs-7641-2026-summer-tliu626/sl-report/outputs/sample.csv",
+  "kmeans_ks": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    10,
+    12
+  ],
+  "gmm_components": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    10,
+    12,
+    15,
+    20
+  ],
+  "gmm_cov_types": [
+    "full",
+    "tied",
+    "diag",
+    "spherical"
+  ],
+  "pca_var_target": 0.9,
+  "dr_components": [
+    2,
+    5,
+    10,
+    15,
+    20,
+    30
+  ],
+  "ica_fun": "logcosh",
+  "ica_max_iter": 500,
+  "rp_kind": "gaussian",
+  "nn_recipe": {
+    "hidden_sizes": [
+      150
+    ],
+    "optimizer": "adam",
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 128,
+    "epochs": 100,
+    "early_stop_patience": null,
+    "class_weighted": true
+  },
+  "manifold_method": "tsne",
+  "fast_mode": false
+}

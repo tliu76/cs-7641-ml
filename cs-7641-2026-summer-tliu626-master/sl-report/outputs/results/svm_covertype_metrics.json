@@ -1,0 +1,19 @@
+{
+  "linear": {
+    "macro_f1": 0.5492,
+    "accuracy": 0.6855,
+    "balanced_accuracy": 0.6246,
+    "fit_s": 4.745,
+    "predict_s": 0.003,
+    "best_C": 10
+  },
+  "rbf": {
+    "macro_f1": 0.6901,
+    "accuracy": 0.7995,
+    "balanced_accuracy": 0.7058,
+    "fit_s": 8.934,
+    "predict_s": 2.105,
+    "best_C": 100,
+    "best_gamma": 0.1
+  }
+}

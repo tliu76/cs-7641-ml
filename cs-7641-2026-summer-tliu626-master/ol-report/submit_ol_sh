@@ -1,0 +1,56 @@
+#!/bin/bash
+#SBATCH --partition=main
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=16G
+#SBATCH --time=02:00:00
+#SBATCH --job-name=ol7641
+#SBATCH --output=ol_main_%j.log
+
+
+set -euo pipefail
+
+echo "============================================================"
+echo "  OL job started : $(date)"
+echo "  Node           : $(hostname)"
+echo "  Working dir     : $(pwd)"
+echo "  Job ID          : ${SLURM_JOB_ID}"
+echo "  CPUs            : ${SLURM_CPUS_PER_TASK}"
+echo "============================================================"
+
+# ── Load modules ──────────────────────────────────────────────────────────────
+module purge
+module load gcc/13.3.0
+module load python/3.11.9
+
+# ── Activate the shared virtual environment (built for the SL report) ─────────
+VENV_DIR="/scratch1/${USER}/envs/cs7641-sl"
+if [ ! -d "${VENV_DIR}" ]; then
+    echo "Virtual env not found at ${VENV_DIR} — run sl-report/setup_env_carc.sh first."
+    exit 1
+fi
+source "${VENV_DIR}/bin/activate"
+echo "Python: $(which python3)  $(python3 --version)"
+
+cd "${SLURM_SUBMIT_DIR}"
+export PYTHONUNBUFFERED=1
+
+# ── Threading: tiny MLP, so cap threads to avoid dispatch overhead ────────────
+export OMP_NUM_THREADS="${SLURM_CPUS_PER_TASK}"
+export MKL_NUM_THREADS="${SLURM_CPUS_PER_TASK}"
+export OL_TORCH_THREADS=4
+
+python3 -c "import torch; print(f'PyTorch {torch.__version__}  CUDA={torch.cuda.is_available()}  threads(capped in run_ol)')" || echo "torch check skipped"
+
+# ── Run the full OL pipeline ──────────────────────────────────────────────────
+echo ""
+echo "[OL] Running full pipeline (baseline -> part1 -> part2 -> part3 -> part4 -> figures) ..."
+python3 run_ol.py all
+
+echo ""
+echo "============================================================"
+echo "  OL job finished : $(date)"
+echo "  Figures  → $(pwd)/outputs/figures/"
+echo "  Results  → $(pwd)/outputs/results/"
+echo "============================================================"

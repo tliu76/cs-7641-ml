@@ -1,0 +1,4 @@
+method,n_components,main_diagnostic,stability,fit_time_s
+PCA,10,cum_evr=0.92,deterministic,0.1074
+ICA,10,median|kurt|=2.06,|corr|=1.00,0.1854
+RP(gauss),10,distortion_std=0.21,seed-varying,0.0014

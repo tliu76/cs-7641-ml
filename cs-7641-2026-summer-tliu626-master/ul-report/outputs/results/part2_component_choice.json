@@ -1,0 +1,8 @@
+{
+  "pca": 10,
+  "ica": 10,
+  "rp": 10,
+  "jl_min_dim": 1100,
+  "jl_eps": 0.3,
+  "pca_var_target": 0.9
+}

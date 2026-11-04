@@ -1,0 +1,11 @@
+{
+  "macro_f1": 0.6783,
+  "accuracy": 0.8075,
+  "balanced_accuracy": 0.6457,
+  "fit_s": 32.969,
+  "predict_s": 0.008,
+  "arch": "(200, 100)",
+  "lr": 0.1,
+  "alpha": 0.1,
+  "n_epochs": 146
+}
